@@ -1,9 +1,8 @@
 <?php
 
-namespace Knp\Menu\Silex\Voter;
+namespace Knp\Menu\Matcher\Voter;
 
 use Knp\Menu\ItemInterface;
-use Knp\Menu\Matcher\Voter\VoterInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -15,14 +14,6 @@ class RouteVoter implements VoterInterface
      * @var Request
      */
     private $request;
-
-    public function __construct()
-    {
-        trigger_error(
-            __CLASS__ . ' is deprecated because of namespace, use Knp\\Menu\\Matcher\\RouteVoter instead.',
-            E_USER_DEPRECATED
-        );
-    }
 
     public function setRequest(Request $request)
     {
